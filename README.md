@@ -1,3 +1,9 @@
-#UnWanted Truth
+# UnWanted Truth
 
-This will be a personal blog used to test various layouts.
+## Description
+
+Personal blog.
+
+## Technologies Used: 
+- React.js
+- React-router-dom
