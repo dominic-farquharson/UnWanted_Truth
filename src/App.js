@@ -14,9 +14,16 @@ const Home = () => (
   <div>Home</div>
 )
 
-const Stories = () => (
-  <div>Stories</div>
-)
+const Stories = (x) => {
+  console.log(x);
+  if(x.match.path==='Animorphs') {
+    return <div>Animorphs</div>
+  }
+  if(x.match.path === '/Stories/1') {
+    return <div>This is page 1</div>
+  }
+  return <div>Stories {x.match.url}</div>
+}
 
 const About = () => (
   <div>About</div>
@@ -50,6 +57,7 @@ const stories = [
 const App = () => (
   // Router uses the HTML5 history API to sync UI w/ URL
   <BrowserRouter>
+    {/* Wrapping Switch in a container (can't be direct child of router) */}
     <div>
       <Nav />
         {/* Exclusively renders a component - renders the first match*/}
@@ -64,6 +72,7 @@ const App = () => (
             })
           }
           {/*<Route exact path="/Stories/:id" render={ (route)=>{return <div>This is story {route.match.params.id}</div>}} />          */}
+          <Route exact path="/Animorphs" component={Stories} />          
           <Route exact path="/About" component={About} />
           <Route exact path="/Contact" component={Contact} />
           <Route exact path="/Blog" component={Blog} />
