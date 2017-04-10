@@ -34,6 +34,18 @@ const NoMatch = () => (
   <div>That route does not exist</div>
 )
 
+// Acceptable routes
+const stories = [
+  {
+    path:'/Stories/1',
+    component:Stories
+  },
+  {
+    path:'/Stories/2',
+    component:Stories
+  }
+]
+
 // App Component
 const App = () => (
   // Router uses the HTML5 history API to sync UI w/ URL
@@ -45,7 +57,13 @@ const App = () => (
           {/* Route component - renders component for the requested route */}        
           <Route exact path="/" component={Home} />
           <Route exact path="/Stories" component={Stories} />
-          <Route exact path="/Stories/:id" render={ (route)=>{return <div>This is story {route.match.params.id}</div>}} />          
+          {/* Mapping over Stories array, creating acceptable routes */}
+          {
+            stories.map( (story, i)=> {
+              return <Route key={i} {...story} />
+            })
+          }
+          {/*<Route exact path="/Stories/:id" render={ (route)=>{return <div>This is story {route.match.params.id}</div>}} />          */}
           <Route exact path="/About" component={About} />
           <Route exact path="/Contact" component={Contact} />
           <Route exact path="/Blog" component={Blog} />
