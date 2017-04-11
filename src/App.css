@@ -27,3 +27,97 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+/* Li Styling */
+ul {
+  list-style-type: none;
+}
+
+/*  Hiding Desktop Nav */
+nav.desktop {
+  display: none;
+}
+
+/* Hamburger Menu  */
+.fa-bars {
+  padding: 10px;
+}
+
+/* Mobile Nav Bar */
+.mobileNav {
+  font-size: 2em;
+  display: none;
+  position: absolute;
+  top:0;
+  width: 100%;
+  height: 100%;
+  animation: fadeInNav .1s ease;
+  background-color: gray;
+}
+
+.mobileNav> ul {
+  width: 100%;
+  /*height: 100%;*/
+}
+
+/* Close Button for mobile Nav */
+.mobileNav>i {
+  position: absolute;
+  padding: 10px;
+  right: 0;
+}
+
+/* Toggling Nav */
+.showNav {
+  display:block;
+}
+
+/* Slide in Effect for mobile Nav */
+@keyframes fadeInNav {
+  from{left:-100%}
+  to{left:0%}
+}
+
+
+/* Desktop Styling */
+@media screen and (min-width:960px) {
+  /* Showing desktop Nav - Desktop Nav styling */
+  nav.desktop {
+    display: block;
+    background-color: #222222;  
+    color: white;
+  }
+
+  /* Site Logo */
+  nav.desktop>h1 {
+    margin-left: 20px;
+  }
+
+  /* Hiding Mobile Nav Icon */
+  nav.mobile {
+    display: none;
+  }
+
+  /* Nav Container */
+  .mobileNav {
+    display:none;
+  }
+
+  .fa-bars {
+    display: none;
+  }
+
+  ul, h1, ul>li {
+    display: inline-block;
+  }
+
+  ul {
+    position: absolute;
+    right: 0;
+    margin: 0;
+  }
+  
+  ul>li {
+    padding: 20px;
+  }
+}

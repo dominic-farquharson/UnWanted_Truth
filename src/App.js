@@ -1,18 +1,19 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+// importing home component
+import Home from './components/Home';
+// importing Blog component
+import Blog from './components/Blog';
+// importing Navigation component
+import Nav from './components/Navigation';
 import {
   BrowserRouter,
   Route,
   Link,
-  NavLink,
   Switch
 } from 'react-router-dom';
 
-
-const Home = () => (
-  <div>Home</div>
-)
 
 const Stories = (x) => {
   console.log(x);
@@ -29,9 +30,7 @@ const About = () => (
   <div>About</div>
 )
 
-const Blog = () => (
-  <div>Blog</div>
-)
+
 
 const Contact = () => (
   <div>Contact</div>
@@ -84,61 +83,7 @@ const App = () => (
 
 )
 
-// Nav Component
-const Nav = () => (
-    <nav>
-      <ul>
-        <li>
-          <NavLink
-            // match url exactly - boolean value
-            exact
-            // Path to link to
-            to="/"
-            // Active class for selected link
-            activeClassName="selectedLink"
-          >
-            Home
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
-            exact
-            to="/Stories"
-            activeClassName="selectedLink"
-          >
-            Stories
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
-            exact
-            to="/About"
-            activeClassName="selectedLink"
-          >
-            About
-          </NavLink> 
-        </li>
-        <li>
-          <NavLink
-            exact
-            to="/Blog"
-            activeClassName="selectedLink"
-          >
-            Blog
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
-            exact
-            to="/Contact"
-            activeClassName="selectedLink"
-          >
-            Contact
-          </NavLink>
-        </li>
-      </ul>    
-    </nav>
-)
+
 
 
 
