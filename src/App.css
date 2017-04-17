@@ -28,6 +28,35 @@
   to { transform: rotate(360deg); }
 }
 
+/* Site Header */
+#siteHeader {
+  top: 0;
+  margin: 0;
+  width:100%;
+  position: absolute;
+  height: 100%;
+}
+
+/* Articles Container */
+.home> article {
+  position: absolute; 
+  top: 100%;
+  text-align: center;
+
+}
+
+#slideshow {
+  position: relative;
+  /*top: 10%;
+  height: 90%;*/
+  width: 100%;
+}
+
+/* Slideshow */
+.carousel>ul>li {
+  display:none;
+}
+
 /* Li Styling */
 ul {
   list-style-type: none;
@@ -40,6 +69,10 @@ nav.desktop {
 
 /* Hamburger Menu  */
 .fa-bars {
+  color: green;
+  font-size: 3em;
+  position: relative;
+  z-index: 1;
   padding: 10px;
 }
 
@@ -53,6 +86,7 @@ nav.desktop {
   height: 100%;
   animation: fadeInNav .1s ease;
   background-color: gray;
+  z-index: 1;
 }
 
 .mobileNav> ul {
@@ -72,10 +106,29 @@ nav.desktop {
   display:block;
 }
 
+
+/* Article Images - Home */
+  .home>article>img {
+    display: block;
+    width: 100%;
+    margin: 2px 0px;
+  }
+
+
 /* Slide in Effect for mobile Nav */
 @keyframes fadeInNav {
   from{left:-100%}
   to{left:0%}
+}
+
+@media screen and (min-width: 481px) and (max-width: 959px) {
+  /* Article Images - Home */
+  .home>article>img {
+    display: inline-block;
+    width: 49.5%;
+    margin: .05%;
+  }
+
 }
 
 
@@ -86,6 +139,19 @@ nav.desktop {
     display: block;
     background-color: #222222;  
     color: white;
+    position: relative;
+    /*top: 0;*/
+    height: 80px;
+    width: 100%;
+    z-index: 1;
+  }
+
+
+  /* Images on Home */
+  .home>article>img {
+    display: inline-block;
+    width:32.5%;
+    margin: .05%;
   }
 
   /* Site Logo */
