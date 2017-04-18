@@ -58,7 +58,7 @@ const App = () => (
   <BrowserRouter>
     {/* Wrapping Switch in a container (can't be direct child of router) */}
     <div>
-      {/*<Nav />*/}
+      <Nav />
         {/* Exclusively renders a component - renders the first match*/}
         <Switch>
           {/* Route component - renders component for the requested route */}        

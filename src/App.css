@@ -40,13 +40,16 @@
 /* Articles Container */
 .home> article {
   position: absolute; 
-  top: 100%;
+  top: 105%;
   text-align: center;
 
 }
 
+/* Slideshow carousel */
 #slideshow {
-  position: relative;
+  position: absolute;
+  top: 0;
+  height: 100%;
   /*top: 10%;
   height: 90%;*/
   width: 100%;
@@ -86,7 +89,7 @@ nav.desktop {
   height: 100%;
   animation: fadeInNav .1s ease;
   background-color: gray;
-  z-index: 1;
+  z-index: 1000;
 }
 
 .mobileNav> ul {
@@ -113,6 +116,15 @@ nav.desktop {
     width: 100%;
     margin: 2px 0px;
   }
+
+  .home {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+  }
+
+
 
 
 /* Slide in Effect for mobile Nav */
