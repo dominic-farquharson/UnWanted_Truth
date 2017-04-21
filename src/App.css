@@ -1,31 +1,6 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-}
-
-.selectedLink {
-  font-size:2em;
-  color:red;
-}
-
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+/* Universal Selector */
+* {
+  font-family: 'Roboto', sans-serif;
 }
 
 /* Site Header */
@@ -39,20 +14,25 @@
 
 /* Articles Container */
 .home> article {
-  position: absolute; 
-  top: 105%;
+  /*position: absolute; */
+  /*top: 105%;*/
   text-align: center;
 
 }
 
 /* Slideshow carousel */
 #slideshow {
-  position: absolute;
-  top: 0;
+  position: relative;
+  /*top: 0;*/
   height: 100%;
   /*top: 10%;
   height: 90%;*/
   width: 100%;
+}
+
+/* Articles Under Slideshow */
+.homeImages {
+  margin-top: 20px;
 }
 
 /* Slideshow */
@@ -77,6 +57,17 @@ nav.desktop {
   position: relative;
   z-index: 1;
   padding: 10px;
+  width: 100%;
+  /* Adding background */
+  background-color: rgba(0,0,0,.4);
+}
+
+/* Psuedoelement */
+.fa-bars::after {
+  font-size: .75em;
+  margin-left: 2%;
+  width: 100%;
+  content: 'UnWanted Truth';
 }
 
 /* Mobile Nav Bar */
@@ -111,19 +102,23 @@ nav.desktop {
 
 
 /* Article Images - Home */
-  .home>article>img {
-    display: block;
-    width: 100%;
-    margin: 2px 0px;
-  }
+.home>article>img {
+  display: block;
+  width: 100%;
+  margin: 2px 0px;
+}
 
-  .home {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-  }
+.home {
+  position: absolute;
+  width: 100%;
+  /*height: 100%;*/
+  top: 0;
+}
 
+/* Footer */
+footer {
+  background-color: #222222;
+}
 
 
 
@@ -133,6 +128,8 @@ nav.desktop {
   to{left:0%}
 }
 
+
+/* Table Styling */
 @media screen and (min-width: 481px) and (max-width: 959px) {
   /* Article Images - Home */
   .home>article>img {

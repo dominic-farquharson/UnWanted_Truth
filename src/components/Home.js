@@ -1,6 +1,7 @@
 import React from 'react';
 import {Carousel} from 'react-bootstrap';
 import Nav from './Navigation';
+import Footer from './Footer';
 
 // Carousel component - React bootrap 
 const carouselInstance = (
@@ -46,6 +47,7 @@ const Home = () => {
           <img src="http://placehold.it/400x400" alt="placeholder" title="placeholder" />
           <img src="http://placehold.it/400x400" alt="placeholder" title="placeholder" />                
         </article>
+        <Footer />
       </section>
     </main>
   )
