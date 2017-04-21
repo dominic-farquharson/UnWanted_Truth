@@ -1,6 +1,7 @@
 /* Universal Selector */
 * {
   font-family: 'Roboto', sans-serif;
+  line-height: 1.5em;
 }
 
 /* Site Header */
@@ -117,16 +118,58 @@ nav.desktop {
 
 /* Footer */
 footer {
+  position: relative;
+  text-align: center;
+  color: white;
+  margin-top: 20px;
+  width: 100%;
   background-color: #222222;
+  font-size: 1.2em;
+}
+
+/* Overriding global ul styling */
+footer>ul {
+  width: 100%;
+  position: relative;
+  margin-bottom: 0px;
+  padding: 0px;
+}
+
+/*footer > ul > li:nth-child(1) {
+  position: absolute;
+  left: 0;
+}*/
+
+/*footer > ul > section {
+  position: absolute;
+  left: 0;
+  height: 100%;
+}*/
+
+footer>ul>section>li {
+  display: block;
+  padding: 0px;
 }
 
 
+/* Links active class */
+.selectedLink {
+  color: white;
+  text-decoration: none;
+  border-bottom: 2px white solid;
+}
+
+a:link {
+    text-decoration: none;
+  }
 
 /* Slide in Effect for mobile Nav */
 @keyframes fadeInNav {
   from{left:-100%}
   to{left:0%}
 }
+
+
 
 
 /* Table Styling */
@@ -137,6 +180,29 @@ footer {
     width: 49.5%;
     margin: .05%;
   }
+
+
+  /* Footer Styling  */
+  footer {
+    height: 50px;
+  }
+
+  footer > ul > section {
+    position: absolute;
+    left: 0;
+    height: 100%;
+  }
+
+  footer>ul>section>li {
+    display: inline-block;
+    margin: 0px 5px;
+    padding: 10px;
+    /* Vertically aligning text in Li */
+    vertical-align: middle;
+    vertical-align: -webkit-baseline-middle;
+}
+
+  
 
 }
 
@@ -150,11 +216,10 @@ footer {
     color: white;
     position: relative;
     /*top: 0;*/
-    height: 80px;
+    /*height: 80px;*/
     width: 100%;
     z-index: 1;
   }
-
 
   /* Images on Home */
   .home>article>img {
@@ -164,8 +229,9 @@ footer {
   }
 
   /* Site Logo */
-  nav.desktop>h1 {
+  nav.desktop > h1 {
     margin-left: 20px;
+    font-size: 2em;
   }
 
   /* Hiding Mobile Nav Icon */
@@ -192,7 +258,36 @@ footer {
     margin: 0;
   }
   
-  ul>li {
+  /* Desktop Nav Bar */
+  nav > ul >li {
     padding: 20px;
   }
+
+  /* Links */
+  a:hover {
+    color: rgba(255,255,255, .7);
+    transition: all 1s;
+  }
+
+/* Footer Desktop */
+  footer {
+    height: 50px;
+  }
+  footer > ul > section {
+    position: absolute;
+    left: 0;
+    height: 100%;
+  }
+
+  footer>ul>section>li {
+    display: inline-block;
+    margin: 0px 5px;
+    padding: 10px;
+    /* Vertically aligning text in Li */
+    vertical-align: middle;
+    vertical-align: -webkit-baseline-middle;
+  }
+
+
+
 }

@@ -4,7 +4,13 @@ const Footer = () => {
     return (
         <footer>
             <ul>
-                <li>&copy; Dominic Farquharson 2016</li>
+                <section>
+                    <li>About</li>
+                    <li>Contact</li>
+                </section>
+                <li>
+                    <span>&copy; Dominic Farquharson 2016</span>
+                </li>
             </ul>
         </footer>
     )
