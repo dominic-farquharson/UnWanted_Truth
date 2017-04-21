@@ -161,7 +161,12 @@ footer>ul>section>li {
 
 a:link {
     text-decoration: none;
-  }
+}
+
+nav > ul > li:hover {
+  background-color: rgba(0,0,0,.5);
+}
+
 
 /* Slide in Effect for mobile Nav */
 @keyframes fadeInNav {
