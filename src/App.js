@@ -40,11 +40,15 @@ const NoMatch = ({location}) => (
 const stories = [
   {
     path:'/Stories/1',
-    component:Stories
+    component: Stories
   },
   {
     path:'/Stories/2',
-    component:Stories
+    component: Stories
+  },
+  {
+    path: '/Stories/3',
+    component: Stories
   }
 ]
 

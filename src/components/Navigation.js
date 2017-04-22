@@ -1,5 +1,5 @@
 import React from 'react';
-import {  NavLink} from 'react-router-dom';
+import {Link, NavLink} from 'react-router-dom';
 import $ from 'jquery';
 
 
@@ -14,7 +14,7 @@ class Nav extends React.Component {
 
     // Toggling Mobile Nav bar 
     toggleNav = () => {
-       $('.mobileNav').toggleClass('showNav ')
+       $('.mobileNav').toggleClass('showNav')
     };
 
     render() {
@@ -44,7 +44,10 @@ class Nav extends React.Component {
                     </ul>    
                 </nav>    
                 <nav className="desktop">
-                    <h1>UnWanted Truth</h1>
+                    {/* Linking to Root */}
+                    <Link to="/">
+                        <h1>UnWanted Truth</h1>
+                    </Link>
                     <ul>
                         <li>
                         <NavLink
