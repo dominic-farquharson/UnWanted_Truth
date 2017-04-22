@@ -7,6 +7,11 @@ Personal blog.
 ## Technologies Used: 
 - React.js
 - React-router-dom
+- CSS
+- Bootstrap
+- Javascript
+- HTML
 
-## About Deployed Version
-The version of the site that is being worked on in this repo is not live. The site will soon be updated with this version.
+## Author
+Dominic Farquharson
+
