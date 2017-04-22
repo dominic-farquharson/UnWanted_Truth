@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 // importing home component
 import Home from './components/Home';
@@ -13,18 +12,8 @@ import {
   Link,
   Switch
 } from 'react-router-dom';
-
-
-const Stories = (x) => {
-  console.log(x);
-  if(x.match.path==='Animorphs') {
-    return <div>Animorphs</div>
-  }
-  if(x.match.path === '/Stories/1') {
-    return <div>This is page 1</div>
-  }
-  return <div>Stories {x.match.url}</div>
-}
+// importing Stories component
+import Stories from './components/Stories';
 
 const About = () => (
   <div>About</div>
@@ -39,11 +28,15 @@ const Contact = () => (
 const NoMatch = ({location}) => (
   <section style={{textAlign: 'center'}}>
     <h1>The route <code>{location.pathname}</code> does not exist</h1>
-    <img style={{width: '50%', height: '50%', margin: '0 auto'}} src="http://blog.extreme-advice.com/wp-content/uploads/2013/01/error.png" title="Error page" alt="Selected route doesn't exist" />    
+    <img 
+      style={{width: '50%', height: '50%', margin: '0 auto'}} 
+      src="http://blog.extreme-advice.com/wp-content/uploads/2013/01/error.png" 
+      title="Error page" alt="Selected route doesn't exist"
+     />    
   </section>
 )
 
-// Acceptable routes
+// Acceptable routes for stories - should change variable name
 const stories = [
   {
     path:'/Stories/1',
