@@ -73,22 +73,22 @@ class Nav extends React.Component {
                         <li>
                         <NavLink
                             exact
-                            to="/About"
-                            activeClassName="selectedLink"
-                        >
-                            About
-                        </NavLink> 
-                        </li>
-                        <li>
-                        <NavLink
-                            exact
                             to="/Blog"
                             activeClassName="selectedLink"
                         >
                             Blog
                         </NavLink>
                         </li>
-                        <li>
+                          <li>
+                        <NavLink
+                            exact
+                            to="/About"
+                            activeClassName="selectedLink"
+                        >
+                            About
+                        </NavLink> 
+                        </li>
+                        {/*<li>
                         <NavLink
                             exact
                             to="/Contact"
@@ -96,7 +96,7 @@ class Nav extends React.Component {
                         >
                             Contact
                         </NavLink>
-                        </li>
+                        </li>*/}
                     </ul>    
                 </nav>
             </header>

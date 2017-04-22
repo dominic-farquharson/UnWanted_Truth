@@ -133,6 +133,7 @@ footer>ul {
   position: relative;
   margin-bottom: 0px;
   padding: 0px;
+  padding-top: 10px;
 }
 
 /*footer > ul > li:nth-child(1) {
@@ -146,9 +147,9 @@ footer>ul {
   height: 100%;
 }*/
 
-footer>ul>section>li {
+footer>ul>section>a {
   display: block;
-  padding: 0px;
+  padding-left: 5px;
 }
 
 
@@ -174,6 +175,11 @@ nav > ul > li:hover {
   to{left:0%}
 }
 
+
+/* Stories Styling */
+.storiesList {
+  
+}
 
 
 

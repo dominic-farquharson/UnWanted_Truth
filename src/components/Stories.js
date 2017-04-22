@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import Card from './Card';
 
 // Stories Component
 /*
@@ -29,6 +30,20 @@ class Stories extends Component {
         document.title = 'UnWanted Truth';
     }
 
+    printStories = () => {
+        let stories = [
+            {title:'Animorphs', description: 'based off of animorphs books', date: '4/17/17'},
+            {title: 'Untitled 2', description: 'lorem ipsum slslslsl', date: '4/22/17'}, 
+            {title: 'Untitled 3',description: 'lorem ipsum slslslslslslslsls', date: '4/25,17'}
+        ];
+        const articles = stories.map((element, i)=>{
+            // Using spread operator
+            return <Card key={i} {...element} />
+        })
+        // )
+        return articles;
+    }
+
     render() {
         // setting props to variable
         const route = this.props;
@@ -40,7 +55,13 @@ class Stories extends Component {
         if(route.match.path==='/Animorphs') {
             // changing Tab Title
             document.title = 'Animorphs';
-            return <div>Animorphs</div>
+            return <div>Animorphs</div>;
+        } else if(route.match.path === '/Stories') {
+            // Rendering All Story Cards
+            return <article className="storiesList">{this.printStories()}</article>;
+        } else {
+          // rendering invidual article - Stories/:id
+          return <Card path={route.match.url} />
         }
 
         // Stories
@@ -50,7 +71,6 @@ class Stories extends Component {
 
 
         // Default
-        return <div> <h1>Stories path: <code>{route.match.url}</code></h1></div>
     }
 }
 export default Stories;
