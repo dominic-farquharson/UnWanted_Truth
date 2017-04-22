@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {Link} from 'react-router-dom';
 
 class Card extends Component {
     constructor() {
@@ -6,14 +7,25 @@ class Card extends Component {
     }
 
     render() {
-        if(this.props.title) {
+        // List of Stories - Stories Route
+        if(this.props.title && this.props.path) {
             return(
                 <section className="articleCard">
                     <h1>
                         {this.props.title} <br /> 
                         <span style={{fontSize: '.75em', fontWeight: 'none'}}>{this.props.date}</span>
                     </h1>
-                    <p>{this.props.description}</p>
+                    {/*<p>{this.props.description}</p>*/}
+                    {/* Linking to story route */}
+                    <Link to={this.props.path}>
+                        {/* Appears on hover */}
+                        {/*<section className="cardHover">
+                            <div className="cardContainer">
+                                <p>{this.props.description}</p>                    
+                                <h1>Start Reading <br />{this.props.title}</h1>
+                            </div>
+                        </section>*/}
+                    </Link>
                 </section>
             );
         }

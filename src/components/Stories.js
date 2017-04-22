@@ -32,9 +32,9 @@ class Stories extends Component {
 
     printStories = () => {
         let stories = [
-            {title:'Animorphs', description: 'based off of animorphs books', date: '4/17/17'},
-            {title: 'Untitled 2', description: 'lorem ipsum slslslsl', date: '4/22/17'}, 
-            {title: 'Untitled 3',description: 'lorem ipsum slslslslslslslsls', date: '4/25,17'}
+            {title:'Animorphs', description: 'based off of animorphs books', date: '4/17/17', path: '/Animorphs'},
+            {title: 'Untitled 2', description: 'lorem ipsum slslslsl', date: '4/22/17', path: '/none'}, 
+            {title: 'Untitled 3',description: 'lorem ipsum slslslslslslslsls', date: '4/25,17', path: '/none'}
         ];
         const articles = stories.map((element, i)=>{
             // Using spread operator

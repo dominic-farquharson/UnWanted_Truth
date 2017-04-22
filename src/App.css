@@ -176,45 +176,87 @@ nav > ul > li:hover {
 }
 
 
-/* Stories Styling */
+/**************
+  Stories Styling 
+***************/
 .storiesList {
-  padding: 50px;
+  /*padding: 50px;*/
 }
 
 /* Individual Article Card */
 section.articleCard {
+  position: relative;
   width: 100%;
   height: 100%;
-  padding: 10px;
+  padding: 10px; 
+  color: white;
+  text-shadow: 2px 2px black; 
+  font-family: 'Mukta Vaani', sans-serif;
+}
+
+/* Hiding div */
+.cardHover {
+  display: none;
+  color: black;
+  text-align: center;
+
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-color: rgba(0,0,0,.5);
+}
+
+/* Article Learn More - Appears on Hover */
+section.articleCard:hover .cardHover {
+  display:block;
+}
+
+.cardContainer {
+  /*text-align: center;*/
+  margin: 0 auto;
+  position: relative;
+  width: 50%;
+  top: 45%;
 }
 
 /* First Story */
 section.articleCard:nth-child(1) {
-  position: absolute;
-  top: 50px;
-  left: 0;
-  background-color: seagreen;
+  /*position: absolute;*/
+  /*top: 50px;*/
+  /*left: 0;*/
+  /*background-color: seagreen;*/
+  /* Credit: Unsplash - Ming Jun Tan*/
+  background: url('/assets/optimized-animorphs.jpg');
 }
 
 /* Second Story */
 section.articleCard:nth-child(2) {
-  position: absolute;
-  top: 100%;
-  left: 0;
+  /*position: absolute;
+  top: 100%;*/
+  /*left: 0;*/
   background-color: teal;
 }
 
 /* Third Story */
 section.articleCard:nth-child(3) {
-  position: absolute;
-  top: 200%;
-  left: 0;
+  /*position: absolute;*/
+  /*top: 200%;
+  left: 0;*/
   background-color: royalblue;
 }
 
+/* Resizing Story Images */
+  section.articleCard:nth-child(3), section.articleCard:nth-child(1), section.articleCard:nth-child(2) {
+   height: 500px;
+   background-size: cover;
+   background-repeat: no-repeat;
+  }
 
 
-/* Table Styling */
+/* Tablet Styling */
 @media screen and (min-width: 481px) and (max-width: 959px) {
   /* Article Images - Home */
   .home>article>img {
@@ -222,6 +264,13 @@ section.articleCard:nth-child(3) {
     width: 49.5%;
     margin: .05%;
   }
+
+  /* Resizing Story Images */
+  section.articleCard:nth-child(3), section.articleCard:nth-child(1), section.articleCard:nth-child(2) {
+   background-size: contain;
+   background-repeat: no-repeat;
+  }
+
 
 
   /* Footer Styling  */
@@ -244,6 +293,40 @@ section.articleCard:nth-child(3) {
     vertical-align: -webkit-baseline-middle;
 }
 
+
+  /******
+  Stories Styling - Tablet
+  ******/
+  /* First Story */
+  section.articleCard:nth-child(1) {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    /*background-color: seagreen;*/
+    background: url('/assets/optimized-animorphs.jpg');
+  }
+
+  /* Second Story */
+  section.articleCard:nth-child(2) {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: teal;
+  }
+
+  /* Third Story */
+  section.articleCard:nth-child(3) {
+    position: absolute;
+    top: 200%;
+    left: 0;
+    background-color: royalblue;
+  }
+
+  /* Resizing Story Images */
+  section.articleCard:nth-child(3), section.articleCard:nth-child(1), section.articleCard:nth-child(2) {
+    height: 100%;
+    background-size: cover;
+  }
   
 
 }
@@ -260,7 +343,7 @@ section.articleCard:nth-child(3) {
     /*top: 0;*/
     /*height: 80px;*/
     width: 100%;
-    z-index: 1;
+    z-index: 100;
   }
 
   /* Images on Home */
@@ -329,7 +412,38 @@ section.articleCard:nth-child(3) {
     vertical-align: middle;
     vertical-align: -webkit-baseline-middle;
   }
+  /******
+  Stories Styling - Desktop
+  ******/
+  /* First Story */
+  section.articleCard:nth-child(1) {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    /*background-color: seagreen;*/
+    background: url('/assets/optimized-animorphs.jpg');
+  }
 
+  /* Second Story */
+  section.articleCard:nth-child(2) {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: teal;
+  }
 
+  /* Third Story */
+  section.articleCard:nth-child(3) {
+    position: absolute;
+    top: 200%;
+    left: 0;
+    background-color: royalblue;
+  }
+
+  /* Resizing Story Images */
+  section.articleCard:nth-child(3), section.articleCard:nth-child(1), section.articleCard:nth-child(2) {
+    height: 100%;
+    background-size: cover;
+  }
 
 }
