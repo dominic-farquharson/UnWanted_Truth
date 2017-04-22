@@ -16,13 +16,27 @@ import {
 import Stories from './components/Stories';
 
 const About = () => (
-  <div>About</div>
+  <section style={{textAlign: 'center'}}>
+    <h1>About</h1>
+    <img 
+      style={{display: 'block', width: '50%', height: '50%', margin: '0 auto'}}
+      src="https://image.freepik.com/free-vector/coming-soon-background-with-spotlight_23-2147501119.jpg" 
+      alt="coming soon" title="comint soon" 
+    />
+  </section>
 )
 
 
 
 const Contact = () => (
-  <div>Contact</div>
+  <section style={{textAlign: 'center'}}>
+    <h1>Contact</h1>
+    <img 
+      style={{display: 'block', width: '50%', height: '50%', margin: '0 auto'}}
+      src="https://image.freepik.com/free-vector/coming-soon-background-with-spotlight_23-2147501119.jpg" 
+      alt="coming soon" title="comint soon" 
+    />
+  </section>
 )
 
 const NoMatch = ({location}) => (
@@ -30,6 +44,7 @@ const NoMatch = ({location}) => (
     <h1>The route <code>{location.pathname}</code> does not exist</h1>
     <img 
       style={{width: '50%', height: '50%', margin: '0 auto'}} 
+      // Credit: Blog Extremem Adivde 
       src="http://blog.extreme-advice.com/wp-content/uploads/2013/01/error.png" 
       title="Error page" alt="Selected route doesn't exist"
      />    

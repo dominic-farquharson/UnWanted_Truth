@@ -178,7 +178,38 @@ nav > ul > li:hover {
 
 /* Stories Styling */
 .storiesList {
-  
+  padding: 50px;
+}
+
+/* Individual Article Card */
+section.articleCard {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+}
+
+/* First Story */
+section.articleCard:nth-child(1) {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  background-color: seagreen;
+}
+
+/* Second Story */
+section.articleCard:nth-child(2) {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: teal;
+}
+
+/* Third Story */
+section.articleCard:nth-child(3) {
+  position: absolute;
+  top: 200%;
+  left: 0;
+  background-color: royalblue;
 }
 
 
