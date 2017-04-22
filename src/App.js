@@ -36,8 +36,11 @@ const Contact = () => (
   <div>Contact</div>
 )
 
-const NoMatch = () => (
-  <div>That route does not exist</div>
+const NoMatch = ({location}) => (
+  <section style={{textAlign: 'center'}}>
+    <h1>The route <code>{location.pathname}</code> does not exist</h1>
+    <img style={{width: '50%', height: '50%', margin: '0 auto'}} src="http://blog.extreme-advice.com/wp-content/uploads/2013/01/error.png" title="Error page" alt="Selected route doesn't exist" />    
+  </section>
 )
 
 // Acceptable routes
