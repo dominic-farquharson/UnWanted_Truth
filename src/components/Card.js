@@ -32,8 +32,19 @@ class Card extends Component {
         } else if (this.props.chapterTitle) {
             return (
                 <li className="chapterCard">
-                    <h1> {this.props.chapterTitle}</h1>
-                    <img src="https://placehold.it/100x100" alt="placeholder" title="placeholder" />
+                    <section className="heading">
+                        <div> 
+                            <h3>{this.props.chapterTitle}</h3> 
+                            <p>4/17/16</p>
+                        </div>
+                    </section>
+                    <section className="cardBody">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis tempore nesciunt numquam totam obcaecati expedita in iure, assumenda debitis non enim repudiandae nihil, recusandae! Totam dolores, expedita ab quis nam.</p>
+                    </section>
+                    <section className="cardFooter">
+                        <Link to="#">Read more</Link>
+                    </section>
+                    {/*<img src="https://placehold.it/100x100" alt="placeholder" title="placeholder" />*/}
                 </li>
             )
         }

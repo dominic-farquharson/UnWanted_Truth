@@ -13,7 +13,7 @@ const ChaptersList = (props) => {
             <h1>{props.story}</h1>
             <ul className="chaptersList">{chapters}</ul>
             {/*<h1>This should not be floated</h1>*/}
-            <Footer />
+            {/*<Footer />*/}
         </article>
     )
 }

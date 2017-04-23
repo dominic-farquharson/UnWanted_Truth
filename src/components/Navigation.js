@@ -46,7 +46,7 @@ class Nav extends React.Component {
                 <nav className="desktop">
                     {/* Linking to Root */}
                     <Link to="/">
-                        <h1>UnWanted Truth</h1>
+                        <h1 style={{paddingLeft: '10px'}}>UnWanted Truth</h1>
                     </Link>
                     <ul>
                         <li>

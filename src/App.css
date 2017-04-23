@@ -283,6 +283,10 @@ Chapters Styling
   display: block;
 }
 
+/*****************
+Chapter Card 
+*******************/
+
 /* Chapter Card - Mobile */
 .chapterCard {
   display: block;
@@ -290,15 +294,51 @@ Chapters Styling
   /*width: 500px;*/
   width: 100%;
   /*float: right;*/
-  height: 500px;
-  background-color: blue;
-  border: 1px black solid;
-  margin: 2px;
+  /*height: 250px;*/
+  background-color: white;
+  /*border: 1px black solid;*/
+  margin: 0px 3px 40px 0px;;
+  /* Box shadow */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+
+}
+/* Chapter Card Heading */
+.chapterCard > .heading > div > p {
+  color: rgb(153, 153, 153);
+}
+/* Chapter Card Body */
+.chapterCard > .cardBody {
 
 }
 
+/* Chapter Card Footer */
+.chapterCard > .cardFooter {
+
+}
+
+/* Anchor in card footer */
+ .cardFooter > a {
+   color: black;
+   /*border-color: initial;*/
+   /*transition: all 3s ease-in-out;*/
+ }
+
+  .cardFooter > a:hover {
+   color: black;
+   /*font-size: 1.2em;*/
+   border-bottom: 1px black solid;
+ }
+
+ /* Adding border in card */
+ .chapterCard > .heading, .chapterCard > .cardBody, .chapterCard > .cardFooter  {
+   border-bottom: 1px rgb(229, 229, 229) solid;
+   padding: 20px;
+ }
+
 .chaptersContainer> h1 {
   text-align: center;
+  text-transform: uppercase;
+  text-decoration: underline;
 }
 
 .clearFix::after {
