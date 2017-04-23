@@ -183,6 +183,13 @@ nav > ul > li:hover {
   /*padding: 50px;*/
 }
 
+/* Visit Article */
+.visitArticle {
+  position: absolute;
+  top: 45%;
+  right: 5%;
+}
+
 /* Individual Article Card */
 section.articleCard {
   position: relative;

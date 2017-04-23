@@ -59,7 +59,7 @@ class Stories extends Component {
             return <div>Animorphs</div>;
         } else if(route.match.path === '/Stories') {
             // Rendering All Story Cards
-            return <article className="storiesList">{this.printStories()}></article>;
+            return <article className="storiesList">{this.printStories()}</article>;
         } else {
           // rendering invidual article - Stories/:id
           return <Card path={route.match.url} />

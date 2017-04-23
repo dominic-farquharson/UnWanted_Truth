@@ -12,12 +12,13 @@ class Card extends Component {
             return(
                 <section className="articleCard">
                     <h1>
-                        {this.props.title} <br /> 
-                        <span style={{fontSize: '.75em', fontWeight: 'none'}}>{this.props.date}</span>
+                        {/*{this.props.title} <br /> */}
+                        {/*<span style={{fontSize: '.75em', fontWeight: 'none'}}>{this.props.date}</span>*/}
+                        <p className="visitArticle"><Link to={this.props.path}> Start Reading {this.props.title} </Link> </p>
                     </h1>
                     {/*<p>{this.props.description}</p>*/}
                     {/* Linking to story route */}
-                    <Link to={this.props.path}>
+                    {/*<Link to={this.props.path}>*/}
                         {/* Appears on hover */}
                         {/*<section className="cardHover">
                             <div className="cardContainer">
@@ -25,8 +26,8 @@ class Card extends Component {
                                 <h1>Start Reading <br />{this.props.title}</h1>
                             </div>
                         </section>*/}
-                    </Link>
-                </section>
+                    {/*</Link>*/}             
+                </section>     
             );
         }
         return (
