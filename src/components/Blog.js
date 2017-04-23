@@ -1,4 +1,5 @@
 import React from 'react';
+import Footer from './Footer';
 
 const Blog = () => (
   <section style={{textAlign: 'center'}}>
@@ -8,6 +9,7 @@ const Blog = () => (
       src="https://image.freepik.com/free-vector/coming-soon-background-with-spotlight_23-2147501119.jpg" 
       alt="coming soon" title="comint soon" 
     />
+    <Footer />
   </section>
 )
 

@@ -14,6 +14,7 @@ import {
 } from 'react-router-dom';
 // importing Stories component
 import Stories from './components/Stories';
+import Footer from './components/Footer';
 
 const About = () => (
   <section style={{textAlign: 'center'}}>
@@ -23,6 +24,7 @@ const About = () => (
       src="https://image.freepik.com/free-vector/coming-soon-background-with-spotlight_23-2147501119.jpg" 
       alt="coming soon" title="comint soon" 
     />
+    <Footer />
   </section>
 )
 
@@ -36,6 +38,7 @@ const Contact = () => (
       src="https://image.freepik.com/free-vector/coming-soon-background-with-spotlight_23-2147501119.jpg" 
       alt="coming soon" title="comint soon" 
     />
+    <Footer />    
   </section>
 )
 
@@ -48,6 +51,7 @@ const NoMatch = ({location}) => (
       src="http://blog.extreme-advice.com/wp-content/uploads/2013/01/error.png" 
       title="Error page" alt="Selected route doesn't exist"
      />    
+    <Footer />     
   </section>
 )
 

@@ -29,6 +29,13 @@ class Card extends Component {
                     {/*</Link>*/}             
                 </section>     
             );
+        } else if (this.props.chapterTitle) {
+            return (
+                <li className="chapterCard">
+                    <h1> {this.props.chapterTitle}</h1>
+                    <img src="https://placehold.it/100x100" alt="placeholder" title="placeholder" />
+                </li>
+            )
         }
         return (
             <section> Card for <h1>Stories path: <code>{this.props.path}</code></h1></section>

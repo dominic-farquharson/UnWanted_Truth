@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import Card from './Card';
 import Footer from './Footer';
+import ChaptersList from './ChaptersList';
 
 // Stories Component
 /*
@@ -56,8 +57,14 @@ class Stories extends Component {
         if(route.match.path==='/Animorphs') {
             // changing Tab Title
             document.title = 'Animorphs';
-            return <div>Animorphs</div>;
+
+            /* Chapters List */
+            const chapters = ['chapter 1', 'chapter 2', 'chapter 3', 'chapter 4', 'The End'];
+
+            // Chapters List component
+            return <ChaptersList story='Animorphs' chapters={chapters} />
         } else if(route.match.path === '/Stories') {
+
             // Rendering All Story Cards
             return <article className="storiesList">{this.printStories()}</article>;
         } else {

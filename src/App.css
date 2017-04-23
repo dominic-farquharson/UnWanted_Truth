@@ -263,6 +263,50 @@ section.articleCard:nth-child(3) {
   }
 
 
+/********************
+
+Chapters Styling
+
+**********************/
+
+/* chapters container */
+.chaptersList {
+  position: relative;
+  width: 100%;
+  padding: 50px;
+  text-align: center;
+}
+
+.chaptersContainer > h1, .chapterCard > h1 {
+  display: block;
+}
+
+/* Chapter Card - Mobile */
+.chapterCard {
+  display: block;
+  position: relative;
+  /*width: 500px;*/
+  width: 100%;
+  /*float: right;*/
+  height: 500px;
+  background-color: blue;
+  border: 1px black solid;
+  margin: 2px;
+
+}
+
+.chaptersContainer> h1 {
+  text-align: center;
+}
+
+.clearFix::after {
+  clear: both;
+  display: table;
+  content: '';
+}
+
+
+
 /* Tablet Styling */
 @media screen and (min-width: 481px) and (max-width: 959px) {
   /* Article Images - Home */
@@ -333,6 +377,14 @@ section.articleCard:nth-child(3) {
   section.articleCard:nth-child(3), section.articleCard:nth-child(1), section.articleCard:nth-child(2) {
     height: 100%;
     background-size: cover;
+  }
+
+   /***********
+  Chapter Card - Tablet
+  ***********/
+  .chapterCard {
+    display: inline-block;
+    width: 45%;
   }
   
 
@@ -451,6 +503,14 @@ section.articleCard:nth-child(3) {
   section.articleCard:nth-child(3), section.articleCard:nth-child(1), section.articleCard:nth-child(2) {
     height: 100%;
     background-size: cover;
+  }
+
+  /***********
+  Chapter Card - Desktop
+  ***********/
+  .chapterCard {
+    display: inline-block;
+    width: 33%;
   }
 
 }
