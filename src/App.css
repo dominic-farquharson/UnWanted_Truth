@@ -419,6 +419,11 @@ Chapters Styling
     font-size: 2em;
   }
 
+  /* Positioning Home to top */
+  .home {
+    top: 0;
+  }
+
   /* Hiding Mobile Nav Icon */
   nav.mobile {
     display: none;
