@@ -4,6 +4,10 @@
   line-height: 1.5em;
 }
 
+body {
+  background-color: whitesmoke;
+}
+
 /* Site Header */
 #siteHeader {
   top: 0;
@@ -338,7 +342,7 @@ Chapter Card
 .chaptersContainer> h1 {
   text-align: center;
   text-transform: uppercase;
-  text-decoration: underline;
+  /*text-decoration: underline;*/
 }
 
 .clearFix::after {

@@ -42,7 +42,7 @@ class Card extends Component {
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis tempore nesciunt numquam totam obcaecati expedita in iure, assumenda debitis non enim repudiandae nihil, recusandae! Totam dolores, expedita ab quis nam.</p>
                     </section>
                     <section className="cardFooter">
-                        <Link to="#">Read more</Link>
+                        <Link to={this.props.path} >Read more</Link>
                     </section>
                     {/*<img src="https://placehold.it/100x100" alt="placeholder" title="placeholder" />*/}
                 </li>

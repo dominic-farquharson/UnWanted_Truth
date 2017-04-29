@@ -15,10 +15,13 @@ import {
 // importing Stories component
 import Stories from './components/Stories';
 import Footer from './components/Footer';
+// component to view individual article/chapter
+import ViewArticle from './components/ViewArticle';
 
-const About = () => (
+const About = (props) => (
   <section style={{textAlign: 'center'}}>
     <h1>About</h1>
+    {console.log(props)}
     <img 
       style={{display: 'block', width: '50%', height: '50%', margin: '0 auto'}}
       src="https://image.freepik.com/free-vector/coming-soon-background-with-spotlight_23-2147501119.jpg" 
@@ -69,7 +72,31 @@ const stories = [
     path: '/Stories/3',
     component: Stories
   }
-]
+];
+
+// Acceptable Routes for Animorphs
+const animorphsChapters = [
+   {
+    path:'/Animorphs/1',
+    component: ViewArticle
+  },
+  {
+    path:'/Animorphs/2',
+    component: Stories
+  },
+  {
+    path: '/Animorphs/3',
+    component: Stories
+  },
+   {
+    path: '/Animorphs/4',
+    component: Stories
+  },
+   {
+    path: '/Animorphs/5',
+    component: Stories
+  }
+];
 
 // App Component
 const App = () => (
@@ -90,7 +117,13 @@ const App = () => (
             })
           }
           {/*<Route exact path="/Stories/:id" render={ (route)=>{return <div>This is story {route.match.params.id}</div>}} />          */}
-          <Route exact path="/Animorphs" component={Stories} />          
+          <Route exact path="/Animorphs" component={Stories} /> 
+          {/* Acceptable Routes for Animorphs */}  
+          {
+            animorphsChapters.map(function(chapter, i){
+              return <Route key={i} {...chapter} />
+            })
+          }                        
           <Route exact path="/About" component={About} />
           <Route exact path="/Contact" component={Contact} />
           <Route exact path="/Blog" component={Blog} />

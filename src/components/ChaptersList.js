@@ -5,7 +5,7 @@ import Footer from './Footer';
 const ChaptersList = (props) => {
     // chapters components
     let chapters = props.chapters.map((element, i)=> {
-        return <Card key={i} chapterTitle={element} />
+        return <Card key={i} chapterTitle={element['chapter']} path={element['url']} />
     });
 
     return (

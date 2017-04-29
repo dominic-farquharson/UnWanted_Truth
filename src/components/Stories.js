@@ -50,7 +50,7 @@ class Stories extends Component {
         // setting props to variable
         const route = this.props;
         // console.log('incoming route',route.match.path, route.match.pathname)
-        console.log('path object',route.match)
+        console.log('stories component', this.props)
         
 
         // Animorphs route
@@ -59,9 +59,15 @@ class Stories extends Component {
             document.title = 'Animorphs';
 
             /* Chapters List */
-            const chapters = ['chapter 1', 'chapter 2', 'chapter 3', 'chapter 4', 'The End'];
-
-            // Chapters List component
+            const chapters = [
+                {chapter:'chapter 1', url: 'Animorphs/1'},
+                {chapter:'chapter 2', url: 'Animorphs/2'},
+                {chapter:'chapter 3', url: 'Animorphs/3'},
+                {chapter:'chapter 4', url: 'Animorphs/4'},
+                {chapter:'The End', url: 'Animorphs/5'}
+            ];
+        
+        // Chapters List component
             return <ChaptersList story='Animorphs' chapters={chapters} />
         } else if(route.match.path === '/Stories') {
 
