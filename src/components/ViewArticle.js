@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
-import $ from 'jquery';
+// Importing React Facebook
+import FacebookProvider, { Comments } from 'react-facebook';
 
 // const ViewArticle = (props) => {
 //     console.log('this.props', props.match.path, props)
@@ -46,8 +47,10 @@ class ViewArticle extends Component {
                         {/* Line */}
                         <span></span>
                         <p>by Dominic Farquharson</p>
+                        {/* Chapter Image */}
+                        <div><img style={{width: '100%', height: '400px', margin:'auto'}} src="http://placehold.it/100x100" /></div>
                     </section>
-                    <section>
+                    <section className="articleBody">
                         <h3>Subtitle 1</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem consequuntur modi aliquid officia illo minima saepe corporis, sint, commodi. Temporibus quos ipsum nesciunt, sapiente rerum sequi. Dolorum rerum tempore dolorem.</p>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem consequuntur modi aliquid officia illo minima saepe corporis, sint, commodi. Temporibus quos ipsum nesciunt, sapiente rerum sequi. Dolorum rerum tempore dolorem.</p>
@@ -78,9 +81,14 @@ class ViewArticle extends Component {
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem consequuntur modi aliquid officia illo minima saepe corporis, sint, commodi. Temporibus quos ipsum nesciunt, sapiente rerum sequi. Dolorum rerum tempore dolorem.
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem consequuntur modi aliquid officia illo minima saepe corporis, sint, commodi. Temporibus quos ipsum nesciunt, sapiente rerum sequi. Dolorum rerum tempore dolorem.
                         </p>
-                        <img src="http://placehold.it/200x200" alt="placeholder" title="placeholder" />     
+                        <img src="http://placehold.it/200x200" alt="placeholder" title="placeholder" />    
+                        <p>Enjoyed the article? Leave a comment!</p>
                         <section>
-                            <div className="fb-comments" data-width="600" data-href="http://localhost:3000/Animorphs/1" data-numposts="5"></div>                 
+                        {/* Facebook Comments component */}
+                        <FacebookProvider appId="1479210838795778">
+                            {/* Changing default width */}
+                            <Comments href="localhost:3000/Animorphs/1" width="100%" />
+                        </FacebookProvider>
                         </section>
                     </section>
 

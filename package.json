@@ -4,11 +4,10 @@
   "private": true,
   "author": "Dominic Farquharson",
   "dependencies": {
-    "dotenv": "^4.0.0",
-    "jquery": "^3.2.1",
     "react": "^15.4.2",
     "react-bootstrap": "^0.30.8",
     "react-dom": "^15.4.2",
+    "react-facebook": "^4.0.8",
     "react-router-dom": "^4.0.0",
     "react-scripts": "^0.9.5"
   },
