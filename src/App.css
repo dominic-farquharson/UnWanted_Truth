@@ -192,7 +192,7 @@ Articles - Individual Article/Chapter
 
 /* Centering Article */
 .articleWrapper > article {
-  width: 75%;
+  width: 80%;
   margin: auto;
 }
 
@@ -220,7 +220,7 @@ Articles - Individual Article/Chapter
  /* Body of Article */
  .articleBody {
   /* Resizing body */
-  width: 80%;
+  width: 90%;
   /* Centering */
   margin: auto;
  }
@@ -492,6 +492,19 @@ Chapter Card
     display: inline-block;
     width: 45%;
   }
+
+  /***********
+Articles - Individual Article/Chapter
+************/
+  .articleBody {
+    width: 80%;
+  }
+
+  /* Centering Article */
+.articleWrapper > article {
+    width: 75%;
+    margin: auto;
+  }
   
 
 }
@@ -624,6 +637,18 @@ Chapter Card
     width: 33%;
   }
 
+/***********
+Articles - Individual Article/Chapter
+************/
+  .articleBody {
+    width: 80%;
+  }
+
+    /* Centering Article */
+.articleWrapper > article {
+    width: 75%;
+    margin: auto;
+  }
 
 
 }
