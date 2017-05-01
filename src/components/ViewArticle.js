@@ -38,12 +38,13 @@ class ViewArticle extends Component {
 
     render() {
         return (
-            <main>
+            <main className="articleWrapper">
                 <article>
                     <section className="articleHeading">
-                        <p style={{backgroundColor: 'yellow'}}>Animorphs</p>
+                        <p className="storyLogo">Animorphs</p>
                         <h2>Chapter 1</h2>
-                        <span style={{display: 'block', width: '200px', borderBottom:'1px black solid'}}></span>
+                        {/* Line */}
+                        <span></span>
                         <p>by Dominic Farquharson</p>
                     </section>
                     <section>

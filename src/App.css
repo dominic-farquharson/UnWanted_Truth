@@ -181,6 +181,35 @@ nav > ul > li:hover {
   to{left:0%}
 }
 
+/***********
+Articles - Individual Article/Chapter
+************/
+.articleWrapper {
+  position: relative;
+  /* Moving container */
+  top: 20px;
+}
+
+/* Centering Article */
+.articleWrapper > article {
+  width: 75%;
+  margin: auto;
+}
+
+/* Story - Animorphs, etc*/
+.articleHeading > .storyLogo {
+  background-color: yellow;
+  display: inline;
+  padding: 5px;
+}
+
+.articleHeading > span {
+  display: block;
+  width: 50px;
+  border-bottom: 1px black solid;
+  margin: 15px 0px;
+}
+
 
 /**************
   Stories Styling 
@@ -563,5 +592,7 @@ Chapter Card
     display: inline-block;
     width: 33%;
   }
+
+
 
 }
