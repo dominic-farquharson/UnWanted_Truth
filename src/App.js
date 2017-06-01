@@ -19,11 +19,12 @@ import Footer from './components/Footer';
 import ViewArticle from './components/ViewArticle';
 
 const About = (props) => (
-  <section style={{textAlign: 'center'}}>
+  <section className="flex-container" style={{textAlign: 'center'}}>
     <h1>About</h1>
     {console.log(props)}
     <img 
-      style={{display: 'block', width: '50%', height: '50%', margin: '0 auto'}}
+      //style={{display: 'block', width: '50%', height: '50%', margin: '0 auto'}} 
+      style={{display: 'block', width: '50vw', height: '75vh', margin: '0 auto'}}
       src="https://image.freepik.com/free-vector/coming-soon-background-with-spotlight_23-2147501119.jpg" 
       alt="coming soon" title="comint soon" 
     />
@@ -34,10 +35,11 @@ const About = (props) => (
 
 
 const Contact = () => (
-  <section style={{textAlign: 'center'}}>
+  <section className="flex-container" style={{textAlign: 'center'}}>
     <h1>Contact</h1>
     <img 
-      style={{display: 'block', width: '50%', height: '50%', margin: '0 auto'}}
+      // style={{display: 'block', width: '50%', height: '50%', margin: '0 auto'}} 
+      style={{display: 'block', width: '50vw', height: '75vh', margin: '0 auto'}}
       src="https://image.freepik.com/free-vector/coming-soon-background-with-spotlight_23-2147501119.jpg" 
       alt="coming soon" title="comint soon" 
     />

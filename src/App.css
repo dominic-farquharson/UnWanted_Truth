@@ -2,7 +2,40 @@
 * {
   font-family: 'Roboto', sans-serif;
   line-height: 1.5em;
+  box-sizing: border-box;
 }
+
+/* Blog - About  */
+section.flex-container {
+    /*position: absolute;*/
+    /*top: 0;*/
+
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 100vh;
+    justify-content: space-around;
+    align-content: space-between;
+
+
+}
+
+section > * {
+    flex: 1 1 80vw;
+}
+section > footer {
+    align-self: flex-end;
+}
+
+/* Images */
+section > img {
+    flex-grow: 0.50;
+    /*flex-shrink: 1;*/
+    flex-basis: 25vw;
+}
+
+
+
+
 
 body {
   background-color: whitesmoke;
@@ -123,8 +156,8 @@ nav.desktop {
 
 /* Footer */
 footer {
-  position: absolute;
-  bottom: -150px;
+  /*position: absolute;
+  bottom: -150px;*/
   text-align: center;
   color: white;
   margin-top: 20px;
@@ -139,7 +172,12 @@ footer>ul {
   position: relative;
   margin-bottom: 0px;
   padding: 0px;
-  padding-top: 10px;
+  /*height: auto;*/
+  padding: 10px;
+}
+
+footer > ul > section {
+  height: auto;
 }
 
 /*footer > ul > li:nth-child(1) {
@@ -192,7 +230,7 @@ Articles - Individual Article/Chapter
 
 /* Centering Article */
 .articleWrapper > article {
-  width: 80%;
+  width: 95%;
   margin: auto;
 }
 
@@ -438,7 +476,7 @@ Chapter Card
   footer > ul > section {
     position: absolute;
     left: 0;
-    height: 100%;
+    height: auto;
   }
 
   footer>ul>section>li {
@@ -579,7 +617,7 @@ Articles - Individual Article/Chapter
 
 /* Footer Desktop */
   footer {
-    height: 50px;
+    /*height: 50px;*/
   }
   footer > ul > section {
     position: absolute;

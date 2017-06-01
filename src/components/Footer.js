@@ -5,7 +5,7 @@ const Footer = () => {
     return (
         <footer>
             <ul>
-                <section>
+                <section style={ {height: 'auto'} }>
                     {/*<li>About</li>*/}
                     <Link to="/Contact"><li>Contact</li></Link>
                 </section>
