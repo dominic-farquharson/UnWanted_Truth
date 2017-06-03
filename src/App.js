@@ -114,17 +114,13 @@ const App = () => (
           <Route exact path="/Stories" component={Stories} />
           {/* Mapping over Stories array, creating acceptable routes */}
           {
-            stories.map( (story, i)=> {
-              return <Route key={i} {...story} />
-            })
+            stories.map( (story, i) => <Route key={i} {...story} /> )
           }
           {/*<Route exact path="/Stories/:id" render={ (route)=>{return <div>This is story {route.match.params.id}</div>}} />          */}
           <Route exact path="/Animorphs" component={Stories} /> 
           {/* Acceptable Routes for Animorphs */}  
           {
-            animorphsChapters.map(function(chapter, i){
-              return <Route key={i} {...chapter} />
-            })
+            animorphsChapters.map( (chapter, i) => <Route key={i} {...chapter} /> )
           }                        
           <Route exact path="/About" component={About} />
           <Route exact path="/Contact" component={Contact} />
