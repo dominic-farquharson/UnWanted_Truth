@@ -19,9 +19,15 @@ section.flex-container {
 
 }
 
-section > * {
-    /*flex: 1 1 80vw;*/
+section.flex-container > img, section.flex-container > h1 {
+    flex: 0 0 50vw;
 }
+
+section.flex-container > img {
+    height: 75vh;
+    width: 50vw;
+}
+
 section > footer {
     align-self: flex-end;
 }
@@ -33,7 +39,9 @@ section > img {
     flex-basis: 25vw;
 }
 
-
+.loading {
+  text-align: center;
+}
 
 /*****************
 Article Preview - Flex Items
@@ -67,6 +75,16 @@ Article Preview - Flex Items
   width: Calc(100vw/3);
   height: 50vh;
 }*/
+
+/******************
+Slideshow
+***************/
+.slideImage {
+  width: 100vw;
+  /* Overriding bootstrap */
+    height: 50vh !important;
+    /*min-height: 100vh !important;*/
+}
 
 
 body {
@@ -607,6 +625,19 @@ Articles - Individual Article/Chapter
 
 /* Desktop Styling */
 @media screen and (min-width:960px) {
+    /******************
+  Slideshow
+  ***************/
+  .slideImage {
+    width: 100vw;
+    /* Overriding bootstrap */
+    height: 100vh !important;
+    /*min-height: 100% !important;*/
+    
+  }
+
+
+
   /* Showing desktop Nav - Desktop Nav styling */
   nav.desktop {
     display: block;
@@ -660,6 +691,8 @@ Articles - Individual Article/Chapter
     right: 0;
     margin: 0;
   }
+
+
   
   /* Desktop Nav Bar */
   nav > ul >li {

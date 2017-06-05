@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 // Importing React Facebook
 import FacebookProvider, { Comments } from 'react-facebook';
 import Loading from './Loading';
+import Footer from './Footer';
+import dotenv from 'dotenv';
 
 // const ViewArticle = (props) => {
 //     console.log('this.props', props.match.path, props)
@@ -28,7 +30,9 @@ class ViewArticle extends Component {
 
         this.state = {
             article: {},
-            loaded: false
+            loaded: false,
+            apod: false,
+            story: false,
         }
     }
 
@@ -41,7 +45,7 @@ class ViewArticle extends Component {
         // fetching from api
         fetch(url)
             .then(res => res.json())
-            .then(res => this.setState({article: res, loaded: true}))
+            .then(res => this.setState({article: res, loaded: true, tag: 'Nasa'}))
             .catch(err => console.log(err))
         }
 
@@ -65,16 +69,19 @@ class ViewArticle extends Component {
                 { this.state.loaded? (
                 <article>
                     <section className="articleHeading">
-                        <p className="storyLogo">Animorphs</p>
-                        <h2>Chapter 1</h2>
+                        {/* Logo - Story Tag */}
+                        <p className="storyLogo">{this.state.tag}</p>
+                        {/* Title */}
+                        <h2> {this.state.article.title}</h2>
                         {/* Line */}
                         <span></span>
-                        <p>by Dominic Farquharson</p>
+                        <p>by {this.state.article.author || 'unkown'} <br /> {this.state.article.date} </p>
                         {/* Chapter Image */}
                         <div><img style={{width: '100%', height: '400px', margin:'auto'}} src={this.state.article.url} /></div>
                     </section>
                     <section className="articleBody">
-                        {this.state.article.explanation}
+                        <p>{this.state.article.explanation}</p>
+
                         {/*<h3>Subtitle 1</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem consequuntur modi aliquid officia illo minima saepe corporis, sint, commodi. Temporibus quos ipsum nesciunt, sapiente rerum sequi. Dolorum rerum tempore dolorem.</p>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem consequuntur modi aliquid officia illo minima saepe corporis, sint, commodi. Temporibus quos ipsum nesciunt, sapiente rerum sequi. Dolorum rerum tempore dolorem.</p>
@@ -97,7 +104,7 @@ class ViewArticle extends Component {
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem consequuntur modi aliquid officia illo minima saepe corporis, sint, commodi. Temporibus quos ipsum nesciunt, sapiente rerum sequi. Dolorum rerum tempore dolorem.
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem consequuntur modi aliquid officia illo minima saepe corporis, sint, commodi. Temporibus quos ipsum nesciunt, sapiente rerum sequi. Dolorum rerum tempore dolorem.
                         </p>*/}
-                        <h3>Subtitle 3</h3>                        
+                        {/*<h3>Subtitle 3</h3>                        
                         <img src="http://placehold.it/200x200" alt="placeholder" title="placeholder" />
                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem consequuntur modi aliquid officia illo minima saepe corporis, sint, commodi. Temporibus quos ipsum nesciunt, sapiente rerum sequi. Dolorum rerum tempore dolorem.
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem consequuntur modi aliquid officia illo minima saepe corporis, sint, commodi. Temporibus quos ipsum nesciunt, sapiente rerum sequi. Dolorum rerum tempore dolorem.
@@ -105,18 +112,19 @@ class ViewArticle extends Component {
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem consequuntur modi aliquid officia illo minima saepe corporis, sint, commodi. Temporibus quos ipsum nesciunt, sapiente rerum sequi. Dolorum rerum tempore dolorem.
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem consequuntur modi aliquid officia illo minima saepe corporis, sint, commodi. Temporibus quos ipsum nesciunt, sapiente rerum sequi. Dolorum rerum tempore dolorem.
                         </p>
-                        <img src="http://placehold.it/200x200" alt="placeholder" title="placeholder" />    
+                        <img src="http://placehold.it/200x200" alt="placeholder" title="placeholder" />    */}
                         <p>Enjoyed the article? Leave a comment!</p>
                         <section>
                         {/* Facebook Comments component */}
                         <FacebookProvider appId="1479210838795778">
                             {/* Changing default width */}
-                            <Comments href="localhost:3000/Animorphs/1" width="100%" />
+                            <Comments href={"localhost:3000"+ this.props.match.path} width="100%" />
                         </FacebookProvider>
                         </section>
                     </section>
 
                 </article>) : <Loading /> }
+                <Footer />
             </main>
         )
     }

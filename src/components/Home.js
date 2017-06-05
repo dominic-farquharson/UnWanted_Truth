@@ -9,21 +9,22 @@ import Nasa from './NasaArticles';
 const carouselInstance = (
   <Carousel>
     <Carousel.Item>
-      <Link to='/Stories/1'><img style={{width: '100%'}} alt="900x500" src="https://i.ytimg.com/vi/4QJS9LcB66g/maxresdefault.jpg"/></Link>
+      {/* Credit : annie sprat */}
+     <Link to='/Stories/1'><img className="slideImage"style={{width: '100%'}} alt="900x500" src="../../assets/slide1.jpg"/></Link>
       <Carousel.Caption>
-        <h3>First slide label</h3>
-        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+        <h3>Invasion</h3>
+        <p>Chapter preview - use substring</p>
       </Carousel.Caption>
     </Carousel.Item>
     <Carousel.Item>
-      <Link to="/Stories/2"><img  style={{width: '100%'}} alt="900x500" src="http://www.wallpapereast.com/static/images/Desktop-Wallpaper-330.jpg"/></Link>
+      <Link to="/Stories/2"><img className="slideImage" style={{width: '100%'}} alt="900x500" src="http://www.wallpapereast.com/static/images/Desktop-Wallpaper-330.jpg"/></Link>
       <Carousel.Caption>
-        <h3>Second slide label</h3>
+        <h3>Invasion</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
       </Carousel.Caption>
     </Carousel.Item>
     <Carousel.Item>
-      <Link to="/Stories/3"><img  style={{width: '100%'}} alt="900x500" src="http://www.largehdwallpapers.com/wp-content/uploads/2016/03/Colourful-3D-HD-Wallpapers-For-Desktop.jpg" /></Link>
+      <Link to="/Stories/3"><img className="slideImage" style={{width: '100%'}} alt="900x500" src="http://www.largehdwallpapers.com/wp-content/uploads/2016/03/Colourful-3D-HD-Wallpapers-For-Desktop.jpg" /></Link>
       <Carousel.Caption>
         <h3>Third slide label</h3>
         <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
@@ -44,7 +45,7 @@ const Home = () => {
          <article className="homeArticles"> 
            <h1>Latest</h1> 
             <Nasa /> 
-           <h1>Nasa</h1>
+           <h1>Misc</h1>
             <Nasa />            
          </article>
         <Footer />

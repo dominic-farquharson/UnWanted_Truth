@@ -118,6 +118,11 @@ const App = () => (
           }
           {/*<Route exact path="/Stories/:id" render={ (route)=>{return <div>This is story {route.match.params.id}</div>}} />          */}
           <Route exact path="/Animorphs" component={Stories} /> 
+
+          {/* Animorphs dynamic route */}
+          {/*<Route exact path="/Animorphs/:id" component={ViewArticle} /> */}
+
+
           {/* Acceptable Routes for Animorphs */}  
           {
             animorphsChapters.map( (chapter, i) => <Route key={i} {...chapter} /> )

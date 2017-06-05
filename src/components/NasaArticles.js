@@ -32,6 +32,7 @@ class Nasa extends Component {
             name={this.state.articles.title}
             img={this.state.articles.hdurl}
             summary={this.state.articles.explanation}
+            path="/apod"
      /> )
     //   }
     //  );
