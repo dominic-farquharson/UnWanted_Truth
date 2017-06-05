@@ -48,8 +48,8 @@ Article Preview - Flex Items
 *************/
 .articlePreview { 
   flex-basis: Calc(100vh/3);
-  width: Calc(100%/3);
-  flex: 1 1;
+  /*width: Calc(100%/3);*/
+  flex: 0 0 100vw;
 }
 
 .articlePreview img {
@@ -625,6 +625,17 @@ Articles - Individual Article/Chapter
 
 /* Desktop Styling */
 @media screen and (min-width:960px) {
+    /*****************
+Article Preview - Flex Items
+*************/
+.articlePreview { 
+    flex-basis: Calc(100vh/3);
+    /*width: Calc(100%/3);*/
+    flex: 0 0 33%;
+  }
+
+
+
     /******************
   Slideshow
   ***************/
