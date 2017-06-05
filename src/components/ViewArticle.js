@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 // Importing React Facebook
 import FacebookProvider, { Comments } from 'react-facebook';
+import Loading from './Loading';
 
 // const ViewArticle = (props) => {
 //     console.log('this.props', props.match.path, props)
@@ -24,10 +25,31 @@ import FacebookProvider, { Comments } from 'react-facebook';
 class ViewArticle extends Component {
     constructor() {
         super();
+
+        this.state = {
+            article: {},
+            loaded: false
+        }
+    }
+
+    componentWillMount() {
+        console.log(this.props.match.url.substring(1,));
+        let url;
+        const path = this.props.match.url.substring(1,);
+        if(path === 'apod') {
+         url = 'https://powerful-sierra-34429.herokuapp.com/api/apod';
+        // fetching from api
+        fetch(url)
+            .then(res => res.json())
+            .then(res => this.setState({article: res, loaded: true}))
+            .catch(err => console.log(err))
+        }
+
     }
 
     // changing document title when component mounts
     componentDidMount() {
+        console.log('props', this.props)
         document.title = 'Animorphs Chapter 1';                      
     }
 
@@ -40,6 +62,7 @@ class ViewArticle extends Component {
     render() {
         return (
             <main className="articleWrapper">
+                { this.state.loaded? (
                 <article>
                     <section className="articleHeading">
                         <p className="storyLogo">Animorphs</p>
@@ -48,10 +71,11 @@ class ViewArticle extends Component {
                         <span></span>
                         <p>by Dominic Farquharson</p>
                         {/* Chapter Image */}
-                        <div><img style={{width: '100%', height: '400px', margin:'auto'}} src="http://placehold.it/100x100" /></div>
+                        <div><img style={{width: '100%', height: '400px', margin:'auto'}} src={this.state.article.url} /></div>
                     </section>
                     <section className="articleBody">
-                        <h3>Subtitle 1</h3>
+                        {this.state.article.explanation}
+                        {/*<h3>Subtitle 1</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem consequuntur modi aliquid officia illo minima saepe corporis, sint, commodi. Temporibus quos ipsum nesciunt, sapiente rerum sequi. Dolorum rerum tempore dolorem.</p>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem consequuntur modi aliquid officia illo minima saepe corporis, sint, commodi. Temporibus quos ipsum nesciunt, sapiente rerum sequi. Dolorum rerum tempore dolorem.</p>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem consequuntur modi aliquid officia illo minima saepe corporis, sint, commodi. Temporibus quos ipsum nesciunt, sapiente rerum sequi. Dolorum rerum tempore dolorem.
@@ -72,7 +96,7 @@ class ViewArticle extends Component {
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem consequuntur modi aliquid officia illo minima saepe corporis, sint, commodi. Temporibus quos ipsum nesciunt, sapiente rerum sequi. Dolorum rerum tempore dolorem.
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem consequuntur modi aliquid officia illo minima saepe corporis, sint, commodi. Temporibus quos ipsum nesciunt, sapiente rerum sequi. Dolorum rerum tempore dolorem.
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem consequuntur modi aliquid officia illo minima saepe corporis, sint, commodi. Temporibus quos ipsum nesciunt, sapiente rerum sequi. Dolorum rerum tempore dolorem.
-                        </p>
+                        </p>*/}
                         <h3>Subtitle 3</h3>                        
                         <img src="http://placehold.it/200x200" alt="placeholder" title="placeholder" />
                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem consequuntur modi aliquid officia illo minima saepe corporis, sint, commodi. Temporibus quos ipsum nesciunt, sapiente rerum sequi. Dolorum rerum tempore dolorem.
@@ -92,7 +116,7 @@ class ViewArticle extends Component {
                         </section>
                     </section>
 
-                </article>
+                </article>) : <Loading /> }
             </main>
         )
     }

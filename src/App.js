@@ -121,7 +121,9 @@ const App = () => (
           {/* Acceptable Routes for Animorphs */}  
           {
             animorphsChapters.map( (chapter, i) => <Route key={i} {...chapter} /> )
-          }                        
+          }   
+          {/* APOD Route */}
+          <Route exact path="/apod" component={ViewArticle} />
           <Route exact path="/About" component={About} />
           <Route exact path="/Contact" component={Contact} />
           <Route exact path="/Blog" component={Blog} />

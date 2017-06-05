@@ -3,6 +3,7 @@ import {Carousel} from 'react-bootstrap';
 import Nav from './Navigation';
 import Footer from './Footer';
 import {Link} from 'react-router-dom';
+import Nasa from './NasaArticles';
 
 // Carousel component - React bootrap 
 const carouselInstance = (
@@ -37,23 +38,23 @@ const Home = () => {
   return(
     <main>
       <section className="home">
-        {/*<Nav />*/}
-        <article id="slideshow">{carouselInstance}</article>
-        {/*<img id="siteHeader" src="https://images.unsplash.com/photo-1451481454041-104482d8e284?dpr=1&auto=compress,format&fit=crop&w=1199&h=800&q=80&cs=tinysrgb&crop=&bg=" />*/}
-        <article className="homeImages"> 
-          <h1>Latest</h1> 
-          <img src="http://placehold.it/400x400" alt="placeholder" title="placeholder" />
-          <img src="http://placehold.it/400x400" alt="placeholder" title="placeholder" />
-          <img src="http://placehold.it/400x400" alt="placeholder" title="placeholder" />   
-          <h1>Nasa</h1>
-          <img src="http://placehold.it/400x400" alt="placeholder" title="placeholder" />
-          <img src="http://placehold.it/400x400" alt="placeholder" title="placeholder" />
-          <img src="http://placehold.it/400x400" alt="placeholder" title="placeholder" />                
-        </article>
+       {/*<Nav />*/}
+         <article id="slideshow">{carouselInstance}</article>
+         {/*<img id="siteHeader" src="https://images.unsplash.com/photo-1451481454041-104482d8e284?dpr=1&auto=compress,format&fit=crop&w=1199&h=800&q=80&cs=tinysrgb&crop=&bg=" />*/}
+         <article className="homeArticles"> 
+           <h1>Latest</h1> 
+            <Nasa /> 
+           <h1>Nasa</h1>
+            <Nasa />            
+         </article>
         <Footer />
-      </section>
+        </section>
     </main>
   )
 }
+
+
+
+
 
 export default Home;
