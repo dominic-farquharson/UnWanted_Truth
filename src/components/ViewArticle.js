@@ -77,7 +77,13 @@ class ViewArticle extends Component {
                         <span></span>
                         <p>by {this.state.article.author || 'unkown'} <br /> {this.state.article.date} </p>
                         {/* Chapter Image */}
-                        <div><img style={{width: '100%', height: '400px', margin:'auto'}} src={this.state.article.url} /></div>
+                        <div>
+                            { 
+                               this.state.article.media_type==='video'?
+                                    <iframe src={this.state.article.url}></iframe> :
+                                    <img style={{width: '100%', height: '400px', margin:'auto'}} src={this.state.article.url} /> 
+                            }
+                        </div>
                     </section>
                     <section className="articleBody">
                         <p>{this.state.article.explanation}</p>

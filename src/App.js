@@ -17,6 +17,7 @@ import Stories from './components/Stories';
 import Footer from './components/Footer';
 // component to view individual article/chapter
 import ViewArticle from './components/ViewArticle';
+import Contact from './components/Contact/Contact';
 
 const About = (props) => (
   <section className="flex-container" style={{textAlign: 'center'}}>
@@ -34,18 +35,18 @@ const About = (props) => (
 
 
 
-const Contact = () => (
-  <section className="flex-container" style={{textAlign: 'center'}}>
-    <h1>Contact</h1>
-    <img 
-      // style={{display: 'block', width: '50%', height: '50%', margin: '0 auto'}} 
-      style={{display: 'block', width: '50vw', height: '75vh', margin: '0 auto'}}
-      src="https://image.freepik.com/free-vector/coming-soon-background-with-spotlight_23-2147501119.jpg" 
-      alt="coming soon" title="comint soon" 
-    />
-    <Footer />    
-  </section>
-)
+// const Contact = () => (
+//   <section className="flex-container" style={{textAlign: 'center'}}>
+//     <h1>Contact</h1>
+//     <img 
+//       // style={{display: 'block', width: '50%', height: '50%', margin: '0 auto'}} 
+//       style={{display: 'block', width: '50vw', height: '75vh', margin: '0 auto'}}
+//       src="https://image.freepik.com/free-vector/coming-soon-background-with-spotlight_23-2147501119.jpg" 
+//       alt="coming soon" title="comint soon" 
+//     />
+//     <Footer />    
+//   </section>
+// )
 
 const NoMatch = ({location}) => (
   <section style={{textAlign: 'center'}}>
@@ -120,7 +121,7 @@ const App = () => (
           <Route exact path="/Animorphs" component={Stories} /> 
 
           {/* Animorphs dynamic route */}
-          {/*<Route exact path="/Animorphs/:id" component={ViewArticle} /> */}
+          <Route exact path="/Animorphs/:id" component={ViewArticle} /> 
 
 
           {/* Acceptable Routes for Animorphs */}  

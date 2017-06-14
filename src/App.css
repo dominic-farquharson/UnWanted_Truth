@@ -5,6 +5,16 @@
   box-sizing: border-box;
 }
 
+/**********
+iframe
+***********/
+iframe {
+  width: 50vw;
+  height: 50vh;
+  margin: 0 auto;
+}
+
+
 /* Blog - About  */
 section.flex-container {
     /*position: absolute;*/
@@ -18,9 +28,46 @@ section.flex-container {
 
 
 }
+/******
+  Contact Form
+******/
+section.flex-container > form {
+  display: flex;
+  /* Main axis */
+  flex-direction: column;
+  height: 100vh;
+  /* alignment - cross axis */
+  align-items: center;
+}
+
+section.flex-container > form > input {
+  flex-basis: 50px;
+  width: 65vw;
+  margin: 10px;
+}
+
+.contact {
+  flex-wrap: wrap;
+}
+
+.contact > * {
+  flex-basis: 100vw;
+}
+
+section.flex-container > form > input[type="submit"] {
+  flex-basis: 50px;
+  width: 100px;
+}
+
+section.flex-container > form > textarea {
+  width: 65vw;
+  height: 20vh;
+}
+
+
 
 section.flex-container > img, section.flex-container > h1 {
-    flex: 0 0 50vw;
+    flex: 0 0 80vw;
 }
 
 section.flex-container > img {
