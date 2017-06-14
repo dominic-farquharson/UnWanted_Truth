@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import Footer from '../Footer';
 import $ from 'jquery';
-import axios from 'axios';
 
 class Contact extends Component {
     constructor() {
