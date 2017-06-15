@@ -17,14 +17,14 @@ const carouselInstance = (
       </Carousel.Caption>
     </Carousel.Item>
     <Carousel.Item>
-      <Link to="/Stories/2"><img className="slideImage" style={{width: '100%'}} alt="900x500" src="http://www.wallpapereast.com/static/images/Desktop-Wallpaper-330.jpg"/></Link>
+      <Link to="/Stories/2"><img className="slideImage" style={{width: '100%'}} alt="900x500" src="https://www.wallpapereast.com/static/images/Desktop-Wallpaper-330.jpg"/></Link>
       <Carousel.Caption>
         <h3>Invasion</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
       </Carousel.Caption>
     </Carousel.Item>
     <Carousel.Item>
-      <Link to="/Stories/3"><img className="slideImage" style={{width: '100%'}} alt="900x500" src="http://www.largehdwallpapers.com/wp-content/uploads/2016/03/Colourful-3D-HD-Wallpapers-For-Desktop.jpg" /></Link>
+      <Link to="/Stories/3"><img className="slideImage" style={{width: '100%'}} alt="900x500" src="https://www.largehdwallpapers.com/wp-content/uploads/2016/03/Colourful-3D-HD-Wallpapers-For-Desktop.jpg" /></Link>
       <Carousel.Caption>
         <h3>Third slide label</h3>
         <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>

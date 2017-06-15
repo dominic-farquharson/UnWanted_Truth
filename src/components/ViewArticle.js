@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 import FacebookProvider, { Comments } from 'react-facebook';
 import Loading from './Loading';
 import Footer from './Footer';
-import dotenv from 'dotenv';
+
 
 // const ViewArticle = (props) => {
 //     console.log('this.props', props.match.path, props)
@@ -81,7 +81,7 @@ class ViewArticle extends Component {
                             { 
                                this.state.article.media_type==='video'?
                                     <iframe src={this.state.article.url}></iframe> :
-                                    <img style={{width: '100%', height: '400px', margin:'auto'}} src={this.state.article.url} /> 
+                                    <img alt={this.state.title} title={this.state.title} style={{width: '100%', height: '400px', margin:'auto'}} src={this.state.article.url} /> 
                             }
                         </div>
                     </section>

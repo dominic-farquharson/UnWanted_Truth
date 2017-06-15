@@ -57,6 +57,9 @@ section.flex-container > form > input {
 section.flex-container > form > input[type="submit"] {
   flex-basis: 50px;
   width: 100px;
+  border-radius: 50%;
+  background-color: white;
+  border: 1px solid rgba(0,0,0,.6);
 }
 
 section.flex-container > form > textarea {

@@ -12,6 +12,7 @@ const ChaptersList = (props) => {
         <article className="chaptersContainer">
             <h1>{props.story}</h1>
             <ul className="chaptersList">{chapters}</ul>
+            <Footer />
         </article>
     )
 }

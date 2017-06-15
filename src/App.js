@@ -49,7 +49,7 @@ const About = (props) => (
 // )
 
 const NoMatch = ({location}) => (
-  <section style={{textAlign: 'center'}}>
+  <section className="flex-container" style={{textAlign: 'center'}}>
     <h1>The route <code>{location.pathname}</code> does not exist</h1>
     <img 
       style={{width: '50%', height: '50%', margin: '0 auto'}} 

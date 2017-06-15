@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import fetch from 'node-fetch';
 import Loading from './Loading';
 import ArticlePreview from './ArticlePreview';
 
@@ -29,11 +28,13 @@ class Nasa extends Component {
   printArticles() {
      let x = [0,1,2,3];
      return x.map(_ => <ArticlePreview
-            name={this.state.articles.title}
-            img={this.state.articles.hdurl}
-            summary={this.state.articles.explanation}
-            path="/apod"
-     /> )
+                          key={_}
+                          name={this.state.articles.title}
+                          img={this.state.articles.hdurl}
+                          summary={this.state.articles.explanation}
+                          path="/apod"
+                        /> 
+          )
     //   }
     //  );
   }

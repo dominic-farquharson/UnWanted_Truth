@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import Footer from '../Footer';
-import $ from 'jquery';
 
 class Contact extends Component {
     constructor() {
@@ -80,10 +79,10 @@ class Contact extends Component {
                  <h2>Contact</h2>
                 <form onSubmit={this.handleSubmit} action="#">
                     {/* Controlled */}
-                    <input type="text" name="full_name" value={this.state.name} onChange={this.handleName} placeholder="Full Name" required/>                                        
+                    <input type="text" name="full_name" value={this.state.name} onChange={this.handleName} placeholder="Name" required/>                                        
                     <input type="text" name="subject" value={this.state.subject} onChange={this.handleSubject} placeholder="Subject" required/>                                        
                     <input type="email" name="email" value={this.state.email} onChange={this.handleEmail} placeholder="Email" required/>
-                    <textarea placeholder="hello world" value={this.state.body} onChange={this.handleEmailBody} required></textarea>
+                    <textarea placeholder="Message" value={this.state.body} onChange={this.handleEmailBody} required></textarea>
                     <input type="submit" value="Send Email" />
                 </form>
                 <Footer />    
